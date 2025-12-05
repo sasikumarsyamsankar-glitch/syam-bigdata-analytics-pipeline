@@ -1,0 +1,8 @@
+/data/
+/raw_data/
+/processed_data/
+*.log
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
