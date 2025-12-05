@@ -1,0 +1,19 @@
+clezapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: syam-analytics-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: syam-analytics
+  template:
+    metadata:
+      labels:
+        app: syam-analytics
+    spec:
+      containers:
+        - name: syam-container
+          image: syam-analytics-app
+          imagePullPolicy: IfNotPresent
+          command: ["python", "syam_app.py"]
